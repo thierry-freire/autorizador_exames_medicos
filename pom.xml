@@ -11,7 +11,7 @@
 	<packaging>war</packaging>
 
 	<name>autorizador_procedimentos_medicos Maven Webapp</name>
-	<url>http://www.example.com</url>
+	<url>https://github.com/thierry-freire/autorizador_exames_medicos</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,6 +20,11 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-core</artifactId>
+			<version>4.17.2</version>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -120,6 +125,23 @@
 		<finalName>autorizador_procedimentos_medicos</finalName>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>org.liquibase</groupId>
+					<artifactId>liquibase-maven-plugin</artifactId>
+					<version>4.15.0</version>
+					<configuration>
+						<propertyFile>liquibase.properties</propertyFile>
+					</configuration>
+					<executions>
+						<execution>
+							<id>liquibase-update</id>
+							<phase>process-resources</phase>
+							<goals>
+								<goal>update</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>
 					<version>3.1.0</version>
