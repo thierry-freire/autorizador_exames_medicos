@@ -10,7 +10,7 @@ Sistema de autorização de procedimentos médicos
 
 ## Execução do ambiente de desenvolvimento
 1. Colocar banco MySql em memória via xampp
-2. Executar os scripts localizados: 
+2. `mvn liquibase:update` 
 3. `mvn clean install`
 
 ## Docker
