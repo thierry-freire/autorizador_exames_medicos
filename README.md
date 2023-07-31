@@ -13,7 +13,7 @@
 4. Utilizar tomcat v8.5
 
 ## Docker
-1. 1. Colocar banco MySql em memória via xampp
+1. Colocar banco MySql em memória via xampp
 2. Executar os scripts localizados: 
 3. `docker build -t autorizador-exames-medicos .`
 4. `docker run -p 8080:8080 autorizador-exames-medicos`
