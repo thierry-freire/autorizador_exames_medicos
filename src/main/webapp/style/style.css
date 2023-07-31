@@ -1,0 +1,55 @@
+body {
+	background-color: #1a1a1a;
+	color: #fff;
+}
+
+h1 {
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+}
+
+h2 {
+	color: #fff;
+	font-weight: bold;
+}
+
+label {
+	color: #ccc;
+}
+
+input,
+select {
+	background-color: #333;
+	color: #fff;
+	border: 1px solid #555;
+}
+
+button {
+	background-color: #333;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th,
+td {
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #555;
+}
+
+th {
+	background-color: #444;
+	color: #fff;
+}
+
+#formAutorizador,
+#divListaSol {
+	margin: 20px;
+}
