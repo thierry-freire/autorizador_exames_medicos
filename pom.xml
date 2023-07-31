@@ -11,7 +11,7 @@
 	<packaging>war</packaging>
 
 	<name>autorizador_procedimentos_medicos Maven Webapp</name>
-	<url>http://www.example.com</url>
+	<url>https://github.com/thierry-freire/autorizador_exames_medicos</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
