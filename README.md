@@ -22,14 +22,13 @@ Sistema de autorização de procedimentos médicos
 4. `mysql -u root -p`
 
 ## Executar estes comandos indepentente de onde o banco for executado
-5. `CREATE DATABASE zitrus;`
-6. `CREATE USER 'admin'@'%' IDENTIFIED BY 'admin';`
-7. `GRANT ALL PRIVILEGES ON zitrus.* TO 'admin'@'%';`
+1. `CREATE DATABASE zitrus;`
+2. `CREATE USER 'admin'@'%' IDENTIFIED BY 'admin';`
+3. `GRANT ALL PRIVILEGES ON zitrus.* TO 'admin'@'%';`
 
 ## Subir Aplicação
-3. `mvn wrapper:wrapper`
-4. `docker build -t autorizador-exames-medicos .`
-5. `docker run -p 8080:8080 autorizador-exames-medicos`
+1. `docker build -t autorizador-exames-medicos .`
+2. `docker run -p 8080:8080 autorizador-exames-medicos`
 
 ## Link Local
 `http://localhost:8080/autorizador_procedimentos_medicos/`
