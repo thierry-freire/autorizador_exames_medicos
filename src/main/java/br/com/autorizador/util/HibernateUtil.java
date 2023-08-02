@@ -16,14 +16,12 @@ public class HibernateUtil {
 			// Carrega as configurações do hibernate.cfg.xml
 			Configuration configuration = new Configuration().configure();
 
-			configuration.addAnnotatedClass(Procedimentos.class);
-			configuration.addAnnotatedClass(SolicitacaoProcedimento.class);
+		    configuration.addAnnotatedClass(Procedimentos.class);
+		    configuration.addAnnotatedClass(SolicitacaoProcedimento.class);
 
-			ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
-			System.out.println("Hibernate Java Config serviceRegistry created");
-
-			// Cria a instância do SessionFactory com base nas configurações
-			sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+		    ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
+		    System.out.println("Hibernate Java Config serviceRegistry created");
+		    sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 		} catch (Throwable ex) {
 			System.err.println("Falha ao inicializar o SessionFactory: " + ex);
 			throw new ExceptionInInitializerError(ex);

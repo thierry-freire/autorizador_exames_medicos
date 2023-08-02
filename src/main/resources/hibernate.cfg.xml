@@ -6,7 +6,7 @@
 <hibernate-configuration>
     <session-factory>
         <!-- DataSource configuration -->
-        <property name="connection.url">jdbc:mysql://localhost:3306/zitrus?useSSL=false</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/zitrus?useSSL=false&amp;allowPublicKeyRetrieval=true</property>
         <property name="connection.username">admin</property>
         <property name="connection.password">admin</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
