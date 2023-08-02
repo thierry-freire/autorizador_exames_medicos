@@ -1,12 +1,3 @@
-FROM openjdk:8-jdk-alpine
+FROM tomcat:8.5.85
 
-WORKDIR /app
-
-COPY . .
-
-RUN ./mvnw clean package -DskipTests
-
-EXPOSE 8080
-
-# Comando para executar o aplicativo Spring Boot
-CMD ["java", "-war", "target/autorizador-exames-medicos.war"]
+COPY target/autorizador_procedimentos_medicos.war /usr/local/tomcat/webapps/

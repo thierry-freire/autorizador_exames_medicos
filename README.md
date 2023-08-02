@@ -8,16 +8,28 @@ Sistema de autorização de procedimentos médicos
 - Openjdk8+
 - Tomcat v8.5
 
-## Execução do ambiente de desenvolvimento
-1. Colocar banco MySql em memória via xampp
-2. `mvn liquibase:update` 
-3. `mvn clean install`
+## Execução do ambiente de desenvolvimento via eclipse
+1. `mvn liquibase:update` 
+2. `mvn clean install`
+3. `subir tomcat 8.5.85`
 
 ## Docker
-1. Colocar banco MySql em memória via xampp
-2. `mvn liquibase:update` 
-3. `docker build -t autorizador-exames-medicos .`
-4. `docker run -p 8080:8080 autorizador-exames-medicos`
+
+## Subir MySQL
+1. `docker pull mysql:latest`
+2. `docker run -d -p 3306:3306 --name mysql-container -e MYSQL_ROOT_PASSWORD=admin mysql:latest`
+3. `docker exec -it mysql-container bash` e digite a senha admin
+4. `mysql -u root -p`
+
+## Executar estes comandos indepentente de onde o banco for executado
+5. `CREATE DATABASE zitrus;`
+6. `CREATE USER 'admin'@'%' IDENTIFIED BY 'admin';`
+7. `GRANT ALL PRIVILEGES ON zitrus.* TO 'admin'@'%';`
+
+## Subir Aplicação
+3. `mvn wrapper:wrapper`
+4. `docker build -t autorizador-exames-medicos .`
+5. `docker run -p 8080:8080 autorizador-exames-medicos`
 
 ## Link Local
 `http://localhost:8080/autorizador_procedimentos_medicos/`
